@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N2e-fY-tug">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
@@ -33,7 +33,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZJ-LX-VAG">
-                                <rect key="frame" x="0.0" y="384" width="414" height="478"/>
+                                <rect key="frame" x="0.0" y="209" width="414" height="478"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -59,8 +59,12 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="bgButton" destination="3uW-JH-dQd" id="Hzz-I4-pEW"/>
                         <outlet property="greetingText" destination="8Qc-0i-LCc" id="5CI-aj-NOW"/>
+                        <outlet property="imageView" destination="lZJ-LX-VAG" id="Bhf-id-0r9"/>
                         <outlet property="navBar" destination="4OH-SB-jte" id="0Fb-jl-Vpr"/>
+                        <outlet property="settingsButton" destination="QhZ-wD-EJk" id="voD-lD-LtD"/>
+                        <outlet property="textField" destination="VJx-Yh-Eyl" id="kZI-vo-FrU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btV-sr-5XV" sceneMemberID="firstResponder"/>

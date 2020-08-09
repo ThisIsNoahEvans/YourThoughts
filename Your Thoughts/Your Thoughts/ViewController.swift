@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class HomeVC: UIViewController {
     
@@ -18,9 +19,38 @@ class HomeVC: UIViewController {
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
     }
+    
+    private func loadImage(fileName: String) -> UIImage? {
+        do {
+            let imageData = try Data(contentsOf: fileName)
+            return UIImage(data: imageData)
+        } catch {
+            print("Error loading image: \(error)")
+        }
+        return nil
+    }
+    
+    func animateImage(imgName: String) {
+        imageView.isHidden = false
+        imageView.layer.cornerRadius = 10
+        imageView.clipsToBounds = true
+        let toImage = loadImage(fileName: imgName)
+        UIView.transition(with: self.imageView,
+                          duration: 0.3,
+                          options: .transitionCrossDissolve,
+                          animations: {
+                              self.imageView.image = toImage
+        },
+                          completion: nil)
+    }
 
+    
+    @IBOutlet weak var bgButton: UIBarButtonItem!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var greetingText: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     let defaults = UserDefaults.standard
     var name: String = ""
@@ -30,6 +60,12 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        greetingText.isHidden = true
+        bgButton.isEnabled = false
+        settingsButton.isEnabled = false
+        textField.isHidden = true
+        imageView.loadGif(name: "icon-animated")
+        sleep(3)
         // Get current time
         let hour = Calendar.current.component(.hour, from: Date())
         

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		4FB6A5F424E00839008E6BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6A5F224E00839008E6BAF /* Main.storyboard */; };
 		4FB6A5F624E0083D008E6BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6A5F524E0083D008E6BAF /* Assets.xcassets */; };
 		4FB6A5F924E0083D008E6BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6A5F724E0083D008E6BAF /* LaunchScreen.storyboard */; };
+		4FB6A61E24E01625008E6BAF /* icon-animated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6A61D24E01625008E6BAF /* icon-animated.gif */; };
 		841107437BB9BBA1A92DC01C /* Pods_Your_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCB23FDC5AFC3B94B0C6741 /* Pods_Your_Thoughts.framework */; };
 		A9A7EF82566A34CF5467CA7C /* Pods_Your_Thoughts_Your_ThoughtsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E164C4ED2A80F2411F5DD269 /* Pods_Your_Thoughts_Your_ThoughtsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		4FB6A5FF24E0083D008E6BAF /* Your ThoughtsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Your ThoughtsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB6A60A24E0083D008E6BAF /* Your ThoughtsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Your ThoughtsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB6A61C24E0084A008E6BAF /* Your Thoughts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Your Thoughts.entitlements"; sourceTree = "<group>"; };
+		4FB6A61D24E01625008E6BAF /* icon-animated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "icon-animated.gif"; sourceTree = "<group>"; };
 		57C9D34C139E3CE766EC9B05 /* Pods-Your Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Your Thoughts.debug.xcconfig"; path = "Target Support Files/Pods-Your Thoughts/Pods-Your Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
 		7B08185E54864340628CC43C /* Pods-Your Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Your Thoughts.release.xcconfig"; path = "Target Support Files/Pods-Your Thoughts/Pods-Your Thoughts.release.xcconfig"; sourceTree = "<group>"; };
 		919A9BDC56A839CEF528CA5D /* Pods-Your ThoughtsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Your ThoughtsTests.release.xcconfig"; path = "Target Support Files/Pods-Your ThoughtsTests/Pods-Your ThoughtsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		4FB6A5EB24E00839008E6BAF /* Your Thoughts */ = {
 			isa = PBXGroup;
 			children = (
+				4FB6A61D24E01625008E6BAF /* icon-animated.gif */,
 				4FB6A61C24E0084A008E6BAF /* Your Thoughts.entitlements */,
 				4FB6A5EC24E00839008E6BAF /* AppDelegate.swift */,
 				4FB6A5EE24E00839008E6BAF /* SceneDelegate.swift */,
@@ -131,7 +134,6 @@
 				09AE92D5EB38DFA3E77E94B1 /* Pods-Your ThoughtsTests.debug.xcconfig */,
 				919A9BDC56A839CEF528CA5D /* Pods-Your ThoughtsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -255,6 +257,7 @@
 			files = (
 				4FB6A5F924E0083D008E6BAF /* LaunchScreen.storyboard in Resources */,
 				4FB6A5F624E0083D008E6BAF /* Assets.xcassets in Resources */,
+				4FB6A61E24E01625008E6BAF /* icon-animated.gif in Resources */,
 				4FB6A5F424E00839008E6BAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
