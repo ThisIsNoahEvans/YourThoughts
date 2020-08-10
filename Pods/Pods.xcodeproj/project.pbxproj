@@ -51,13 +51,13 @@
 		14C952E95A9E34841FF9C8B959A0F825 /* SwiftGifOrigin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-umbrella.h"; sourceTree = "<group>"; };
 		16B53E13A5B8512F39C81A74866BE289 /* Pods-Your ThoughtsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Your ThoughtsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1CFFB95FCC9D704ADFF255ECB6188A56 /* Pods-Your Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Your Thoughts.release.xcconfig"; sourceTree = "<group>"; };
-		2988BB33E742BACA3A3C9E04DF322422 /* Pods_Your_Thoughts_Your_ThoughtsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Your_Thoughts_Your_ThoughtsUITests.framework; path = "Pods-Your Thoughts-Your ThoughtsUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C44DBAB0CEEC0DFCE76082D5DB32084 /* Pods_Your_ThoughtsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Your_ThoughtsTests.framework; path = "Pods-Your ThoughtsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2988BB33E742BACA3A3C9E04DF322422 /* Pods_Your_Thoughts_Your_ThoughtsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Your_Thoughts_Your_ThoughtsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C44DBAB0CEEC0DFCE76082D5DB32084 /* Pods_Your_ThoughtsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Your_ThoughtsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6B0197BB1AEF60F97F3B18B2D2A594 /* Pods-Your ThoughtsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Your ThoughtsTests-umbrella.h"; sourceTree = "<group>"; };
 		2D737A1A8E240F62A4DFC982AF30C1E9 /* Pods-Your ThoughtsTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Your ThoughtsTests-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		38F46C93AEAAAD00665D43DE26D07027 /* Pods-Your Thoughts-Your ThoughtsUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Your Thoughts-Your ThoughtsUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3ED0AAC04F2F425854C6887D8AE5D473 /* Pods_Your_Thoughts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Your_Thoughts.framework; path = "Pods-Your Thoughts.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED0AAC04F2F425854C6887D8AE5D473 /* Pods_Your_Thoughts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Your_Thoughts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		472C02B2F35B2028C9C993B32CE740BD /* Pods-Your Thoughts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Your Thoughts-umbrella.h"; sourceTree = "<group>"; };
 		4AA8B7EB51EACA57AE44FC2EEA057592 /* Pods-Your Thoughts-Your ThoughtsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Your Thoughts-Your ThoughtsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		505DA0A84746870D2B9F51D355535696 /* Pods-Your Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Your Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,10 +68,10 @@
 		71BA6C52461297DF812366D7E74FF56D /* Pods-Your Thoughts-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Your Thoughts-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7965585DDF687E36697E24DC7CAAAAB0 /* Pods-Your Thoughts-Your ThoughtsUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Your Thoughts-Your ThoughtsUITests-Info.plist"; sourceTree = "<group>"; };
 		7A9D22F337B36FC1BA52679F57D3FB19 /* Pods-Your ThoughtsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Your ThoughtsTests.modulemap"; sourceTree = "<group>"; };
-		8E11114EB42D9DA49AD3DCEAD6567E79 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftGifOrigin.framework; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E11114EB42D9DA49AD3DCEAD6567E79 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		967C3425075CCC965A6967B0AF2A18BB /* Pods-Your Thoughts-Your ThoughtsUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Your Thoughts-Your ThoughtsUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9A6F3B8ED425D3CA81FAEBB8659EEE12 /* Pods-Your ThoughtsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Your ThoughtsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A014C2393AD00EB46E90B0D1FD80BDC0 /* Pods-Your Thoughts-Your ThoughtsUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Your Thoughts-Your ThoughtsUITests-frameworks.sh"; sourceTree = "<group>"; };
 		A310C3A0788F5450966F5AA665C56509 /* Pods-Your ThoughtsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Your ThoughtsTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		AEFC5DB01E859F11EF525F80D0C0E347 /* SwiftGifOrigin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGifOrigin.debug.xcconfig; sourceTree = "<group>"; };
@@ -218,7 +218,6 @@
 				D86D306462FE282D1EE4B92599D55D08 /* UIImage+Gif.swift */,
 				5BF992DABA220748EC56A7BB11C1A8B3 /* Support Files */,
 			);
-			name = SwiftGifOrigin;
 			path = SwiftGifOrigin;
 			sourceTree = "<group>";
 		};
@@ -376,7 +375,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -552,6 +551,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -679,7 +679,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -841,6 +841,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -895,7 +896,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
