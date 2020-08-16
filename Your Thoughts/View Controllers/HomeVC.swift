@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeVC.swift
 //  Your Thoughts
 //
 //  Created by Noah Evans on 09/08/2020.
@@ -7,9 +7,59 @@
 
 import UIKit
 
+var nameCleared: Bool = false
+
 class HomeVC: UIViewController, UITextFieldDelegate {
     
-    func setBG() {
+    let defaults = UserDefaults.standard
+    var name: String = ""
+    var randomGreet: String = ""
+
+    
+    var documentsUrl: URL {
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    }
+    
+    private func loadImage(fileName: String) -> UIImage? {
+        let fileURL = documentsUrl.appendingPathComponent(fileName)
+        do {
+            let imageData = try Data(contentsOf: fileURL)
+            return UIImage(data: imageData)
+        } catch {
+            print("Error loading image: \(error)")
+        }
+        return nil
+    }
+    
+    func backgroundBlur() {
+        // Define blur
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurVisualEffectView = UIVisualEffectView(effect: blurEffect)
+        blurVisualEffectView.frame = view.bounds
+        
+        // Add blur
+        self.view.insertSubview(blurVisualEffectView, at: 1)
+    }
+    
+    func insertAppBackground(fileName: String) {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        let backgroundImageID = "bg1"
+        backgroundImage.image = UIImage(named: backgroundImageID)
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+    }
+    
+    func insertCustomBackground() {
+        let customBGurl = defaults.object(forKey: "custom-background-url")
+        // Load and display BG
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = loadImage(fileName: customBGurl as! String)
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        backgroundBlur()
+    }
+    
+    func insertRandomAppBackground() {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         let chosenImageNo = Int.random(in: 1 ... 6)
         let chosenImageNoStr = String(chosenImageNo)
@@ -18,31 +68,75 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
     }
+    
+    func insertColourBackground(colour: UIColor) {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.backgroundColor = colour
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+    }
+    
+    func setBG() {
+        // Load in defaults
+        let currentBG = defaults.object(forKey: "background") as? Int ?? 0
+        
+        guard let uploadedBG = defaults.bool(forKey: "uploaded-background") as? Bool else { let uploadedBG = false }
+        let colourBG = defaults.object(forKey: "colour-background") as? String
+        
+        // If the user has a custom background
+        if uploadedBG == true {
+            insertCustomBackground()
+        }
+        else {
+            // If the user has a colour BG
+            if colourBG != "NONE" {
+                
+            }
+            if currentBG == 1 {
+                // BG is 1
+                insertAppBackground(fileName: "bg1")
+            }
+            else if currentBG == 2 {
+                // BG is 2
+                insertAppBackground(fileName: "bg2")
+            }
+            else if currentBG == 3 {
+                // BG is 3
+                insertAppBackground(fileName: "bg3")
+            }
+            else if currentBG == 4 {
+                // BG is 4
+                insertAppBackground(fileName: "bg4")
+            }
+            else if currentBG == 5 {
+                // BG is 5
+                insertAppBackground(fileName: "bg5")
+            }
+            else if currentBG == 6 {
+                // BG is 6
+                insertAppBackground(fileName: "bg6")
+            } else {
+                // No background set: likely first launch
+                insertRandomAppBackground()
+            }
+            
+        }
+    }
 
     
-    @IBOutlet weak var bgButton: UIBarButtonItem!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var greetingText: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
     
-    let defaults = UserDefaults.standard
-    var name: String = ""
-    var randomGreet: String = ""
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Text field
         self.textField.delegate = self
         
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(addBlur), name: UIApplication.willResignActiveNotification, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(removeBlur), name: UIApplication.willEnterForegroundNotification, object: nil)
-        
-        
-
         // Get current time
         let hour = Calendar.current.component(.hour, from: Date())
         
@@ -54,10 +148,9 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         // Set background
         setBG()
         // Get name
-        if let name = defaults.string(forKey: "name") {
-        }
-        name = "Noah"
-        if name == "" {
+        // Check if has been deleted
+        if nameCleared == true {
+            // Name has recently been cleared
             // No name
             // Define no name greets
             let morningGreets = ["Got much planned for today?", "Doing much today?", "New day, fresh thoughts!", "It's a fresh day, make it your best yet!", "Enjoy your day!", "Have an amazing day!"]
@@ -78,54 +171,61 @@ class HomeVC: UIViewController, UITextFieldDelegate {
             }
             greetingText.text = randomGreet
             navBar.title = "Hey!"
-        } else {
-            // Name is saved
-            // Define name greets
-            let morningGreets = ["Got much planned for today, \(name)?", "Doing much today?", "New day, fresh thoughts!", "It's a fresh day, make it your best yet!", "Enjoy your day, \(name).", "Have an amazing day, \(name)."]
-            let afternoonGreets = ["How are you today, \(name)?", "How's your day?", "Are you doing well?", "Is your day going well, \(name)?", "How's things?", "Got much planned for later today, \(name)?"]
-            let eveningGreets = ["How was your day, \(name)?", "Did you do much today?", "Was today good, \(name)?", "Did you enjoy your day, \(name)?"]
-            // Check time for random greet
-            if morningTimes.contains(hour) {
-                // Morning
-                randomGreet = morningGreets.randomElement()!
-            }
-            if afternoonTimes.contains(hour) {
-                // Afternoon
-                randomGreet = afternoonGreets.randomElement()!
-            }
-            if eveningTimes.contains(hour) {
-                // Evening
-                randomGreet = eveningGreets.randomElement()!
-            }
-            greetingText.text = randomGreet
-            navBar.title = "Hey, \(String(describing: name))!"
         }
+        else {
+            if let name = defaults.string(forKey: "name") {
+                let isEmpty = name.isEmpty
+                if isEmpty == true {
+                    // No name
+                    // Define no name greets
+                    let morningGreets = ["Got much planned for today?", "Doing much today?", "New day, fresh thoughts!", "It's a fresh day, make it your best yet!", "Enjoy your day!", "Have an amazing day!"]
+                    let afternoonGreets = ["How are you today?", "How's your day?", "Are you doing well?", "Is your day going well?", "How's things?", "Got much planned for later today?"]
+                    let eveningGreets = ["How was your day?", "Did you do much today?", "Was today good?", "Did you enjoy your day?"]
+                    // Check time for random greet
+                    if morningTimes.contains(hour) {
+                        // Morning
+                        randomGreet = morningGreets.randomElement()!
+                    }
+                    if afternoonTimes.contains(hour) {
+                        // Afternoon
+                        randomGreet = afternoonGreets.randomElement()!
+                    }
+                    if eveningTimes.contains(hour) {
+                        // Evening
+                        randomGreet = eveningGreets.randomElement()!
+                    }
+                    greetingText.text = randomGreet
+                    navBar.title = "Hey!"
+                }
+                if isEmpty == false {
+                    // Name is saved
+                    // Define name greets
+                    let morningGreets = ["Got much planned for today, \(name)?", "Doing much today?", "New day, fresh thoughts!", "It's a fresh day, make it your best yet!", "Enjoy your day, \(name).", "Have an amazing day, \(name)."]
+                    let afternoonGreets = ["How are you today, \(name)?", "How's your day?", "Are you doing well?", "Is your day going well, \(name)?", "How's things?", "Got much planned for later today, \(name)?"]
+                    let eveningGreets = ["How was your day, \(name)?", "Did you do much today?", "Was today good, \(name)?", "Did you enjoy your day, \(name)?"]
+                    // Check time for random greet
+                    if morningTimes.contains(hour) {
+                        // Morning
+                        randomGreet = morningGreets.randomElement()!
+                    }
+                    if afternoonTimes.contains(hour) {
+                        // Afternoon
+                        randomGreet = afternoonGreets.randomElement()!
+                    }
+                    if eveningTimes.contains(hour) {
+                        // Evening
+                        randomGreet = eveningGreets.randomElement()!
+                    }
+                    greetingText.text = randomGreet
+                    navBar.title = "Hey, \(name)!"
+                }
+            }
+        }
+
+
     }
     
 
-    
-    @objc func addBlur() {
-        print("App moved to background")
-        // Define blur
-        let blurEffect = UIBlurEffect(style: .systemThinMaterialDark)
-        let blurVisualEffectView = UIVisualEffectView(effect: blurEffect)
-        blurVisualEffectView.frame = view.bounds
-        
-        // Add blur
-        self.view.addSubview(blurVisualEffectView)
-        
-    }
-    
-    @objc func removeBlur() {
-        print("App entered")
-        // Define blur
-        let blurEffect = UIBlurEffect(style: .systemThinMaterialDark)
-        let blurVisualEffectView = UIVisualEffectView(effect: blurEffect)
-        blurVisualEffectView.frame = view.bounds
-        
-        blurVisualEffectView.removeFromSuperview()
-        
-    }
     
     
 
@@ -173,8 +273,8 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.present(alertController, animated: true, completion: nil)
         // End delete here
         
-        // Remove the "//" in the following lines
-        textField.text = ""
+   
+  
         
         // Tells the keybaord to dismiss. If you wanted to bring up the keybaord automatically, you would say "self.yourThoughtsTextField.becomeFirstResponder()"
         self.textField.resignFirstResponder()

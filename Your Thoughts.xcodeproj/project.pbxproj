@@ -15,6 +15,7 @@
 		4FB6A5F924E0083D008E6BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6A5F724E0083D008E6BAF /* LaunchScreen.storyboard */; };
 		4FB6A61E24E01625008E6BAF /* icon-animated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6A61D24E01625008E6BAF /* icon-animated.gif */; };
 		4FD2DFB524E5402F0030321E /* NameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2DFB424E5402F0030321E /* NameVC.swift */; };
+		4FF9A0AC24E8141A00AE3209 /* BackgroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9A0AB24E8141A00AE3209 /* BackgroundVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		4FB6A61C24E0084A008E6BAF /* Your Thoughts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Your Thoughts.entitlements"; sourceTree = "<group>"; };
 		4FB6A61D24E01625008E6BAF /* icon-animated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "icon-animated.gif"; sourceTree = "<group>"; };
 		4FD2DFB424E5402F0030321E /* NameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVC.swift; sourceTree = "<group>"; };
+		4FF9A0AB24E8141A00AE3209 /* BackgroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		4FB6A5EB24E00839008E6BAF /* Your Thoughts */ = {
 			isa = PBXGroup;
 			children = (
+				4FB6A5FA24E0083D008E6BAF /* Info.plist */,
 				4FD2DFB124E53FFB0030321E /* Assets */,
 				4FD2DFB224E5400B0030321E /* Other */,
 				4FD2DFB024E53FF10030321E /* Delegates */,
@@ -108,6 +111,7 @@
 		4FD2DFAF24E53FE60030321E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4FF9A0AB24E8141A00AE3209 /* BackgroundVC.swift */,
 				4FB6A5F024E00839008E6BAF /* HomeVC.swift */,
 				4FD2DFB424E5402F0030321E /* NameVC.swift */,
 			);
@@ -136,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				4FB6A61C24E0084A008E6BAF /* Your Thoughts.entitlements */,
-				4FB6A5FA24E0083D008E6BAF /* Info.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				4FD2DFB524E5402F0030321E /* NameVC.swift in Sources */,
 				4FB6A5ED24E00839008E6BAF /* AppDelegate.swift in Sources */,
 				4FB6A5EF24E00839008E6BAF /* SceneDelegate.swift in Sources */,
+				4FF9A0AC24E8141A00AE3209 /* BackgroundVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -510,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -525,7 +529,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Your Thoughts/Your Thoughts.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TAZG5QA452;
 				INFOPLIST_FILE = "Your Thoughts/Info.plist";
@@ -548,7 +551,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Your Thoughts/Your Thoughts.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TAZG5QA452;
 				INFOPLIST_FILE = "Your Thoughts/Info.plist";
