@@ -833,11 +833,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="174"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r98-yL-0Sw">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -856,11 +851,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="174"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m4-st-gOm">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -879,11 +869,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="174"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vti-bv-Jpc">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -902,11 +887,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="174"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvt-3V-epc">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -925,11 +905,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="174"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpa-UQ-U6A">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -948,11 +923,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="174"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6w-Yf-M8o">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -988,13 +958,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fjB-CT-O37" id="tIf-kI-5mt">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2I-tR-OP5">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </tableViewCell>
@@ -1008,13 +971,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rff-Xa-Jdf" id="zAR-ZN-p6e">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6a-lN-Z5c">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                     </tableViewCell>
@@ -1023,18 +979,11 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                             <tableViewSection headerTitle="Orange" id="kiy-8z-bkZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="060-UX-vmH">
-                                        <rect key="frame" x="20" y="2046.5" width="374" height="91"/>
+                                        <rect key="frame" x="20" y="2186.5" width="374" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="060-UX-vmH" id="ckp-jc-BcY">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgv-ct-OnN">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     </tableViewCell>
@@ -1043,18 +992,11 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                             <tableViewSection headerTitle="Pink" id="SG4-u2-1Vi">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="3yV-Iw-RwP">
-                                        <rect key="frame" x="20" y="2193.5" width="374" height="91"/>
+                                        <rect key="frame" x="20" y="2333.5" width="374" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3yV-Iw-RwP" id="gDB-9l-SNu">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRs-ac-dOt">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                     </tableViewCell>
@@ -1063,18 +1005,11 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                             <tableViewSection headerTitle="Purple" id="mfs-D1-Nxf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="VQp-cB-bOV">
-                                        <rect key="frame" x="20" y="2340.5" width="374" height="91"/>
+                                        <rect key="frame" x="20" y="2480.5" width="374" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VQp-cB-bOV" id="cYA-9h-Qsj">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGw-RF-PaA">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                     </tableViewCell>
@@ -1083,23 +1018,11 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                             <tableViewSection headerTitle="Red" id="SWu-u2-cUW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="BaV-wg-4GQ">
-                                        <rect key="frame" x="20" y="2487.5" width="374" height="91"/>
+                                        <rect key="frame" x="20" y="2627.5" width="374" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BaV-wg-4GQ" id="PVu-kz-ua2">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqY-qz-L2T">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
-                                            </subviews>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="bqY-qz-L2T"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </tableViewCell>
@@ -1108,18 +1031,11 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                             <tableViewSection headerTitle="Teal" id="ANg-Ty-tjS">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="osh-uD-CS4">
-                                        <rect key="frame" x="20" y="2634.5" width="374" height="91"/>
+                                        <rect key="frame" x="20" y="2774.5" width="374" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="osh-uD-CS4" id="3Ik-VO-chy">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPz-ch-ecc">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                     </tableViewCell>
@@ -1128,18 +1044,11 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                             <tableViewSection headerTitle="Yellow" id="Wv3-ht-BGz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="miN-O3-ZJ4">
-                                        <rect key="frame" x="20" y="2781.5" width="374" height="91"/>
+                                        <rect key="frame" x="20" y="2921.5" width="374" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="miN-O3-ZJ4" id="PmM-uH-I4Y">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJQ-Ex-5zm">
-                                                    <rect key="frame" x="345" y="6" width="22" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </tableViewCell>
@@ -1148,23 +1057,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
                         </sections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Background" largeTitleDisplayMode="always" id="tEk-aC-UVA"/>
-                    <connections>
-                        <outlet property="bg1tick" destination="r98-yL-0Sw" id="ozM-ui-yDk"/>
-                        <outlet property="bg2tick" destination="2m4-st-gOm" id="zep-po-RKH"/>
-                        <outlet property="bg3tick" destination="vti-bv-Jpc" id="sK2-Va-Ked"/>
-                        <outlet property="bg4tick" destination="Bvt-3V-epc" id="5rB-fV-bLV"/>
-                        <outlet property="bg5tick" destination="zpa-UQ-U6A" id="1GM-7m-uyQ"/>
-                        <outlet property="bg6tick" destination="j6w-Yf-M8o" id="HDL-Fg-c7A"/>
-                        <outlet property="greenTick" destination="f2I-tR-OP5" id="sd9-vw-3km"/>
-                        <outlet property="indigoTick" destination="O6a-lN-Z5c" id="299-AV-qX0"/>
-                        <outlet property="orangeTick" destination="Hgv-ct-OnN" id="e8A-rF-LJQ"/>
-                        <outlet property="pinkTick" destination="MRs-ac-dOt" id="b0V-AC-QeE"/>
-                        <outlet property="purpleTick" destination="gGw-RF-PaA" id="PZu-Bk-5Nm"/>
-                        <outlet property="redTick" destination="bqY-qz-L2T" id="Tu9-Ae-1C0"/>
-                        <outlet property="selectImage" destination="imD-qG-eT7" id="VkX-99-ywR"/>
-                        <outlet property="tealTick" destination="RPz-ch-ecc" id="1lF-3F-CKZ"/>
-                        <outlet property="yellowTick" destination="tJQ-Ex-5zm" id="Xxa-2S-e7s"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeX-lX-Wzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1178,7 +1070,6 @@ bmQgZmVhdHVyZXMgA8KpIFZlbG9jaXR5IEFwcHMgJiBOb2FoIEV2YW5zIDIwMTktMjAyMA
         <image name="bg4" width="2005" height="1333"/>
         <image name="bg5" width="2005" height="1333"/>
         <image name="bg6" width="2005" height="1333"/>
-        <image name="checkmark.seal.fill" catalog="system" width="128" height="125"/>
         <image name="chevron.left.slash.chevron.right" catalog="system" width="128" height="94"/>
         <image name="delete.left.fill" catalog="system" width="128" height="104"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>

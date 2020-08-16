@@ -9,23 +9,8 @@ import UIKit
 
 class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
-    @IBOutlet weak var selectImage: UITableViewCell!
-    
-    @IBOutlet weak var bg1tick: UIButton!
-    @IBOutlet weak var bg2tick: UIButton!
-    @IBOutlet weak var bg3tick: UIButton!
-    @IBOutlet weak var bg4tick: UIButton!
-    @IBOutlet weak var bg5tick: UIButton!
-    @IBOutlet weak var bg6tick: UIButton!
-    
-    @IBOutlet weak var greenTick: UIButton!
-    @IBOutlet weak var indigoTick: UIButton!
-    @IBOutlet weak var orangeTick: UIButton!
-    @IBOutlet weak var pinkTick: UIButton!
-    @IBOutlet weak var purpleTick: UIButton!
-    @IBOutlet weak var redTick: UIButton!
-    @IBOutlet weak var tealTick: UIButton!
-    @IBOutlet weak var yellowTick: UIButton!
+
+
     
     let defaults = UserDefaults.standard
     var imgPickCancelled: Bool = false
@@ -69,7 +54,7 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                     }
                     defaults.set(urlToSave, forKey: "custom-background-url")
                     defaults.set(true, forKey: "uploaded-background")
-                    selectImage.imageView?.image = UIImage(systemName: "checkmark.seal.fill")
+
                     defaults.set(0, forKey: "background")
                     defaults.set("NONE", forKey: "colour-background")
 
@@ -128,123 +113,9 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
         
         let currentBG: Int = defaults.object(forKey: "background") as? Int ?? 0
         guard let customBG = defaults.bool(forKey: "uploaded-background") as? Bool else { let customBG = false }
-
-        if customBG == true {
-            // User has custom BG
-            selectImage.imageView?.image = UIImage(systemName: "checkmark.seal.fill")
-        } else {
-            if currentBG == 1 {
-                // BG is 1
-                bg1tick.isHidden = false
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-            }
-            if currentBG == 2 {
-                // BG is 2
-                bg1tick.isHidden = true
-                bg2tick.isHidden = false
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-            }
-            if currentBG == 3 {
-                // BG is 3
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = false
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-            }
-            if currentBG == 4 {
-                // BG is 4
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = false
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-            }
-            if currentBG == 5 {
-                // BG is 5
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = false
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-            }
-            if currentBG == 6 {
-                // BG is 6
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = false
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-            }
             
         }
         
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
@@ -267,22 +138,6 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(1, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
-                bg1tick.isHidden = false
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-                selectImage.imageView?.image = UIImage(systemName: "")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
@@ -293,22 +148,6 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(2, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
-                bg1tick.isHidden = true
-                bg2tick.isHidden = false
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-                selectImage.imageView?.image = UIImage(systemName: "")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
@@ -319,22 +158,6 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(3, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = false
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-                selectImage.imageView?.image = UIImage(systemName: "")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
@@ -345,22 +168,6 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(4, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = false
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-                selectImage.imageView?.image = UIImage(systemName: "")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
@@ -371,22 +178,6 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(5, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = false
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-                selectImage.imageView?.image = UIImage(systemName: "")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
@@ -397,22 +188,6 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(6, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = false
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
-                selectImage.imageView?.image = UIImage(systemName: "")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
@@ -425,23 +200,7 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("green", forKey: "colour-background")
-                
-                
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = false
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
+
             }
         }
         if indexPath.section == 12 {
@@ -450,22 +209,7 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("indigo", forKey: "colour-background")
-                
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = false
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
+
             }
         }
         if indexPath.section == 13 {
@@ -474,22 +218,7 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("orange", forKey: "colour-background")
-                
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = false
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
+
             }
         }
         if indexPath.section == 14 {
@@ -498,22 +227,7 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("pink", forKey: "colour-background")
-                
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = false
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
+
             }
         }
         if indexPath.section == 15 {
@@ -522,22 +236,7 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("purple", forKey: "colour-background")
-                
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = false
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
+
             }
         }
         if indexPath.section == 16 {
@@ -546,22 +245,7 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("red", forKey: "colour-background")
-                
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = false
-                tealTick.isHidden = true
-                yellowTick.isHidden = true
+
             }
         }
         if indexPath.section == 17 {
@@ -570,22 +254,7 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("teal", forKey: "colour-background")
-                
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = false
-                yellowTick.isHidden = true
+
             }
         }
         if indexPath.section == 18 {
@@ -594,22 +263,7 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("yellow", forKey: "colour-background")
-                
-                bg1tick.isHidden = true
-                bg2tick.isHidden = true
-                bg3tick.isHidden = true
-                bg4tick.isHidden = true
-                bg5tick.isHidden = true
-                bg6tick.isHidden = true
-                
-                greenTick.isHidden = true
-                indigoTick.isHidden = true
-                orangeTick.isHidden = true
-                pinkTick.isHidden = true
-                purpleTick.isHidden = true
-                redTick.isHidden = true
-                tealTick.isHidden = true
-                yellowTick.isHidden = false
+
             }
         }
 

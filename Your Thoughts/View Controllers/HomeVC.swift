@@ -90,7 +90,40 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         else {
             // If the user has a colour BG
             if colourBG != "NONE" {
-                
+                if colourBG == "green" {
+                    // Green
+                    insertColourBackground(colour: UIColor.systemGreen)
+                }
+                if colourBG == "indigo" {
+                    // Indigo
+                    insertColourBackground(colour: UIColor.systemIndigo)
+                }
+                if colourBG == "orange" {
+                    // Orange
+                    insertColourBackground(colour: UIColor.systemOrange)
+                }
+                if colourBG == "pink" {
+                    // Pink
+                    insertColourBackground(colour: UIColor.systemPink)
+                }
+                if colourBG == "purple" {
+                    // Purple
+                    insertColourBackground(colour: UIColor.systemPurple)
+                }
+                if colourBG == "red" {
+                    // Red
+                    insertColourBackground(colour: UIColor.systemRed)
+                }
+                if colourBG == "teal" {
+                    // Teal
+                    insertColourBackground(colour: UIColor.systemTeal)
+                }
+                if colourBG == "yellow" {
+                    // Yellow
+                    insertColourBackground(colour: UIColor.systemYellow)
+                } else {
+                    insertRandomAppBackground()
+                }
             }
             if currentBG == 1 {
                 // BG is 1
