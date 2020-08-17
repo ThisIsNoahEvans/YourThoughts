@@ -41,19 +41,21 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.view.insertSubview(blurVisualEffectView, at: 1)
     }
     
+ 
     func insertAppBackground(fileName: String) {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        let backgroundImageID = "bg1"
-        backgroundImage.image = UIImage(named: backgroundImageID)
+        let image = UIImage(imageLiteralResourceName: fileName)
+        backgroundImage.image = image
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
     func insertCustomBackground() {
-        let customBGurl = defaults.object(forKey: "custom-background-url")
+        let customBGurl = defaults.object(forKey: "custom-background-url") as! String
         // Load and display BG
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = loadImage(fileName: customBGurl as! String)
+        let image = loadImage(fileName: customBGurl)
+        backgroundImage.image = image
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         backgroundBlur()
@@ -64,16 +66,19 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         let chosenImageNo = Int.random(in: 1 ... 6)
         let chosenImageNoStr = String(chosenImageNo)
         let backgroundImageID = "bg" + chosenImageNoStr
-        backgroundImage.image = UIImage(named: backgroundImageID)
+        let image = UIImage(named: backgroundImageID)
+        backgroundImage.image = image
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
     func insertColourBackground(colour: UIColor) {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.backgroundColor = colour
+        let image = UIImage(color: colour)
+        backgroundImage.image = image
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
+        backgroundBlur()
     }
     
     func setBG() {
@@ -317,3 +322,16 @@ class HomeVC: UIViewController, UITextFieldDelegate {
 
 }
 
+public extension UIImage {
+    convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+    let rect = CGRect(origin: .zero, size: size)
+    UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+    color.setFill()
+    UIRectFill(rect)
+    let image = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+
+    guard let cgImage = image?.cgImage else { return nil }
+    self.init(cgImage: cgImage)
+  }
+}

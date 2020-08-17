@@ -122,10 +122,24 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
             // Custom
             if indexPath.row == 1 {
                 // Select an image
-                imagePicker.allowsEditing = false
-                imagePicker.sourceType = .photoLibrary
-                present(imagePicker, animated: true, completion: nil)
+                
+                let imageAlert = UIAlertController(title: "Select an Image", message: "", preferredStyle: .actionSheet)
 
+                let photoLibrary = UIAlertAction(title: "Photo Library", style: .destructive) { [self] (action:UIAlertAction) in
+                    imagePicker.allowsEditing = false
+                    imagePicker.sourceType = .photoLibrary
+                    present(imagePicker, animated: true, completion: nil)
+                }
+                
+                let camera = UIAlertAction(title: "Camera", style: .destructive) { [self] (action:UIAlertAction) in
+                    imagePicker.allowsEditing = true
+                    imagePicker.sourceType = .camera
+                    present(imagePicker, animated: true, completion: nil)
+                }
+                
+                imageAlert.addAction(photoLibrary)
+                imageAlert.addAction(camera)
+                present(imageAlert, animated: true, completion: nil)
                 
                 tableView.deselectRow(at: indexPath, animated: true)
                 
@@ -134,60 +148,72 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
         if indexPath.section == 3 {
             // Backgrounds
             if indexPath.row == 0 {
-                // Background 1
+                // Leaf
                 defaults.set(1, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
+                
+                print("Leaf")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
         }
         if indexPath.section == 4 {
-            // Background 2
+            // Flower 1
             if indexPath.row == 0 {
                 defaults.set(2, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
+                
+                print("Flower 1")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
     }
         if indexPath.section == 5 {
             if indexPath.row == 0 {
-                // Background 3
+                // Flower 2
                 defaults.set(3, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
+                
+                print("Flower 2")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
     }
         if indexPath.section == 6 {
             if indexPath.row == 0 {
-                // Background 4
+                // Durdle Door
                 defaults.set(4, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
+                
+                print("Durdle Door")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
     }
         if indexPath.section == 7 {
             if indexPath.row == 0 {
-                // Background 5
+                // Sunset
                 defaults.set(5, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
+                
+                print("Sunset")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
     }
         if indexPath.section == 8 {
             if indexPath.row == 0 {
-                // Background 6
+                // Bench
                 defaults.set(6, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("NONE", forKey: "colour-background")
+                
+                print("Bench")
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
