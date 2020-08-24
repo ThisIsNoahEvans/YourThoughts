@@ -227,69 +227,98 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("green", forKey: "colour-background")
 
+                tableView.deselectRow(at: indexPath, animated: true)
             }
         }
-        if indexPath.section == 12 {
+        if indexPath.section == 11 {
             if indexPath.row == 0 {
                 // Indigo
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("indigo", forKey: "colour-background")
 
+                tableView.deselectRow(at: indexPath, animated: true)
             }
         }
-        if indexPath.section == 13 {
+        if indexPath.section == 12 {
             if indexPath.row == 0 {
                 // Orange
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("orange", forKey: "colour-background")
 
+                tableView.deselectRow(at: indexPath, animated: true)
             }
         }
-        if indexPath.section == 14 {
+        if indexPath.section == 13 {
             if indexPath.row == 0 {
                 // Pink
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("pink", forKey: "colour-background")
+                
+                tableView.deselectRow(at: indexPath, animated: true)
 
             }
         }
-        if indexPath.section == 15 {
+        if indexPath.section == 14 {
             if indexPath.row == 0 {
                 // Purple
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("purple", forKey: "colour-background")
 
+                tableView.deselectRow(at: indexPath, animated: true)
             }
         }
-        if indexPath.section == 16 {
+        if indexPath.section == 15 {
             if indexPath.row == 0 {
                 // Red
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("red", forKey: "colour-background")
 
+                tableView.deselectRow(at: indexPath, animated: true)
             }
         }
-        if indexPath.section == 17 {
+        if indexPath.section == 16 {
             if indexPath.row == 0 {
                 // Teal
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("teal", forKey: "colour-background")
 
+                tableView.deselectRow(at: indexPath, animated: true)
             }
         }
-        if indexPath.section == 18 {
+        if indexPath.section == 17 {
             if indexPath.row == 0 {
                 // Yellow
                 defaults.set(0, forKey: "background")
                 defaults.set(false, forKey: "uploaded-background")
                 defaults.set("yellow", forKey: "colour-background")
 
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
+        }
+        if indexPath.section == 18 {
+            if indexPath.row == 0 {
+                // Black
+                defaults.set(0, forKey: "background")
+                defaults.set(false, forKey: "uploaded-background")
+                defaults.set("black", forKey: "colour-background")
+
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
+        }
+        if indexPath.section == 19 {
+            if indexPath.row == 0 {
+                // White
+                defaults.set(0, forKey: "background")
+                defaults.set(false, forKey: "uploaded-background")
+                defaults.set("white", forKey: "colour-background")
+
+                tableView.deselectRow(at: indexPath, animated: true)
             }
         }
 

@@ -17,7 +17,7 @@ class NameVC: UITableViewController, UITextFieldDelegate {
     
     func saveName() {
         let name = nameField.text!
-        defaults.setValue(name, forKey: "name")
+        defaults.set(name, forKey: "name")
         print("Saved name \(name)")
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
@@ -26,6 +26,14 @@ class NameVC: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nameField.delegate = self
+        
+        let savedName = defaults.string(forKey: "name")
+        if savedName == nil{
+            print("Name is not saved")
+        }
+        else {
+            nameField.text = savedName
+        }
     }
     
     @IBAction func saveButton(_ sender: Any) {

@@ -33,10 +33,24 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     
     func backgroundBlur() {
         // Define blur
-        let blurEffect = UIBlurEffect(style: .light)
+        var blurEffect = UIBlurEffect(style: .light)
+        if traitCollection.userInterfaceStyle == .light {
+            // Light mode
+            blurEffect = UIBlurEffect(style: .systemThinMaterialLight)
+        }
+        if traitCollection.userInterfaceStyle == .dark {
+            // Light mode
+            blurEffect = UIBlurEffect(style: .systemThinMaterialDark)
+        }
+        if traitCollection.userInterfaceStyle == .unspecified {
+            // Light mode
+            blurEffect = UIBlurEffect(style: .systemThinMaterialDark)
+        }
         let blurVisualEffectView = UIVisualEffectView(effect: blurEffect)
         blurVisualEffectView.frame = view.bounds
         
+        // Remove previous blur if any
+        self.view.willRemoveSubview(blurVisualEffectView)
         // Add blur
         self.view.insertSubview(blurVisualEffectView, at: 1)
     }
@@ -78,6 +92,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         backgroundImage.image = image
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
+        textField.backgroundColor = colour
         backgroundBlur()
     }
     
@@ -126,6 +141,14 @@ class HomeVC: UIViewController, UITextFieldDelegate {
                 if colourBG == "yellow" {
                     // Yellow
                     insertColourBackground(colour: UIColor.systemYellow)
+                }
+                if colourBG == "black" {
+                    // Yellow
+                    insertColourBackground(colour: UIColor.black)
+                }
+                if colourBG == "white" {
+                    // Yellow
+                    insertColourBackground(colour: UIColor.white)
                 } else {
                     insertRandomAppBackground()
                 }
@@ -166,15 +189,22 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var greetingText: UILabel!
+        
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         // Text field
         self.textField.delegate = self
         
+        // Dark \ light
+      /*  while true {
+            backgroundBlur()
+            sleep(5)
+        }
+        */
         // Get current time
         let hour = Calendar.current.component(.hour, from: Date())
         
@@ -198,6 +228,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
             if morningTimes.contains(hour) {
                 // Morning
                 randomGreet = morningGreets.randomElement()!
+                
             }
             if afternoonTimes.contains(hour) {
                 // Afternoon
@@ -245,17 +276,20 @@ class HomeVC: UIViewController, UITextFieldDelegate {
                     if morningTimes.contains(hour) {
                         // Morning
                         randomGreet = morningGreets.randomElement()!
+                        navBar.title = "Morning, \(name)!"
                     }
                     if afternoonTimes.contains(hour) {
                         // Afternoon
                         randomGreet = afternoonGreets.randomElement()!
+                        navBar.title = "Afternoon, \(name)!"
                     }
                     if eveningTimes.contains(hour) {
                         // Evening
                         randomGreet = eveningGreets.randomElement()!
+                        navBar.title = "Evening, \(name)!"
                     }
                     greetingText.text = randomGreet
-                    navBar.title = "Hey, \(name)!"
+                    
                 }
             }
         }
@@ -263,6 +297,61 @@ class HomeVC: UIViewController, UITextFieldDelegate {
 
     }
     
+    
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.backgroundColor = .systemBackground
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let colourBG = defaults.object(forKey: "colour-background") as? String
+        if colourBG != "NONE" {
+            if colourBG == "green" {
+                // Green
+                textField.backgroundColor = UIColor.systemGreen
+            }
+            if colourBG == "indigo" {
+                // Indigo
+                textField.backgroundColor = UIColor.systemIndigo
+            }
+            if colourBG == "orange" {
+                // Orange
+                textField.backgroundColor = UIColor.systemOrange
+            }
+            if colourBG == "pink" {
+                // Pink
+                textField.backgroundColor =  UIColor.systemPink
+            }
+            if colourBG == "purple" {
+                // Purple
+                textField.backgroundColor = UIColor.systemPurple
+            }
+            if colourBG == "red" {
+                // Red
+                textField.backgroundColor = UIColor.systemRed
+            }
+            if colourBG == "teal" {
+                // Teal
+                textField.backgroundColor = UIColor.systemTeal
+            }
+            if colourBG == "yellow" {
+                // Yellow
+                textField.backgroundColor = UIColor.systemYellow
+            }
+            if colourBG == "black" {
+                // Yellow
+                textField.backgroundColor = UIColor.black
+            }
+            if colourBG == "white" {
+                // Yellow
+                textField.backgroundColor = UIColor.white
+            }
+            // No colour set
+        } else {
+            textField.backgroundColor = UIColor.tertiarySystemGroupedBackground
+        }
+    }
 
     
     
