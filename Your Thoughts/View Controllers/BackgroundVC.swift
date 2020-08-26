@@ -10,7 +10,8 @@ import UIKit
 class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
 
-
+    @IBOutlet weak var blurSwitch: UISwitch!
+    
     
     let defaults = UserDefaults.standard
     var imgPickCancelled: Bool = false
@@ -114,8 +115,34 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
         let currentBG: Int = defaults.object(forKey: "background") as? Int ?? 0
         guard let customBG = defaults.bool(forKey: "uploaded-background") as? Bool else { let customBG = false }
             
-        }
         
+        let blurSwitchDefaults = defaults.bool(forKey: "uploaded-background-blur") ?? true
+        
+        if blurSwitchDefaults == true {
+            // Switch is saved as on (or has not been changed so is set to default)
+            blurSwitch.isOn = true
+            print("Set blur to true")
+        }
+        if blurSwitchDefaults == false {
+            // Switch is saved as off
+            blurSwitch.isOn = false
+            print("Set blur to true")
+        }
+        }
+    
+    @IBAction func blurSwitchChanged(_ sender: Any) {
+        if blurSwitch.isOn == true {
+            // Switch was changed to On
+            defaults.set(true, forKey: "uploaded-background-blur")
+            print("Saved blur as true")
+        }
+        if blurSwitch.isOn == false {
+            // Switch was changed to Off
+            defaults.set(false, forKey: "uploaded-background-blur")
+            print("Saved blur as false")
+        }
+    }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
@@ -125,20 +152,23 @@ class BackgroundVC: UITableViewController, UIImagePickerControllerDelegate & UIN
                 
                 let imageAlert = UIAlertController(title: "Select an Image", message: "", preferredStyle: .actionSheet)
 
-                let photoLibrary = UIAlertAction(title: "Photo Library", style: .destructive) { [self] (action:UIAlertAction) in
+                let photoLibrary = UIAlertAction(title: "Photo Library", style: .default) { [self] (action:UIAlertAction) in
                     imagePicker.allowsEditing = false
                     imagePicker.sourceType = .photoLibrary
                     present(imagePicker, animated: true, completion: nil)
                 }
                 
-                let camera = UIAlertAction(title: "Camera", style: .destructive) { [self] (action:UIAlertAction) in
+                let camera = UIAlertAction(title: "Camera", style: .default) { [self] (action:UIAlertAction) in
                     imagePicker.allowsEditing = true
                     imagePicker.sourceType = .camera
                     present(imagePicker, animated: true, completion: nil)
                 }
                 
+                let cancel = UIAlertAction(title: "Camera", style: .cancel)
+                
                 imageAlert.addAction(photoLibrary)
                 imageAlert.addAction(camera)
+                imageAlert.addAction(cancel)
                 present(imageAlert, animated: true, completion: nil)
                 
                 tableView.deselectRow(at: indexPath, animated: true)
